@@ -14,7 +14,7 @@ $.ajaxPrefilter(function (options) {
     // 拦截响应 判断身份认证信息 防止用户在地址栏也能进入主页
     options.complete = function (res) {
         // console.log(res);
-        console.log(res.responseJSON);
+        // console.log(res.responseJSON);
         var obj = res.responseJSON
         if (obj.status == 1 && obj.message == '身份认证失败！') {
             // 清空token
